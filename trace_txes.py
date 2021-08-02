@@ -43,7 +43,7 @@ class TXO:
 
         hash = tx_hash
         n = tx_details['n']
-        amount = int(tx_details['value']) *100000000
+        amount = int(tx_details['value'] *100000000)
         time = datetime.fromtimestamp(tx['time'])
         owner =  tx_details['scriptPubKey']['hex']
         return cls(hash,n,amount, owner, time)
