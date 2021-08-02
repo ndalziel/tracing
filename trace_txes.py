@@ -45,7 +45,7 @@ class TXO:
         n = tx_details['n']
         amount = int(tx_details['value'] *100000000)
         time = datetime.fromtimestamp(tx['time'])
-        owner =  tx_details['scriptPubKey']['hex']
+        owner =  tx_details['scriptPubKey']['addresses'][0]
         return cls(hash,n,amount, owner, time)
 
     def get_inputs(self,d=1):
